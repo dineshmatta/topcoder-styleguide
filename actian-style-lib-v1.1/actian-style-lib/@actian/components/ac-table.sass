@@ -1,0 +1,133 @@
+/**
+ * the table classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+@import "mixin"
+
+$border-color: #dddddd
+$table-header-color: #9B9B9B
+
+// the table style
+.ac-table
+  +mdc-elevation(4)
+  padding-top: 16px
+  font-size: 14px
+  font-family: Roboto, sans-serif
+
+  // the table common header
+  &__header
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0 16px
+    .ac-showing
+      flex: 1
+    .ac-search-bar
+      flex: initial
+      width: 320px
+
+  // the table cell item
+  .ac-table__cell-item
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin-right: 16px
+    flex: 1
+    +flex-levels
+
+    .ac-table__sort-icon
+      width: 20px
+      height: 20px
+      margin-right: 8px
+    i
+      color: $color-actian-azure
+
+    &.color-actian-azure
+      +table-cell-color($color-actian-azure)
+
+    &.color-carbon
+      +table-cell-color($color-carbon)
+
+    &.color-light-grey
+      +table-cell-color($border-color)
+
+    &.color-mid-grey
+      +table-cell-color($color-mid-grey)
+
+    &.action
+      cursor: pointer
+      justify-content: flex-end
+      color: $color-actian-azure
+      .ac-icon-arrow
+        margin-left: 8px
+        transform: rotate(90deg)
+        width: 16px
+        height: 16px
+
+  // the table header
+  &__theader
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: 16px
+    padding-left: 16px
+    padding-right: 16px
+    border-top: 3px solid $color-carbon
+    height: 56px
+    border-bottom: 1px solid $border-color
+    .ac-table__cell-item
+      color: $table-header-color
+      cursor: pointer
+      i
+        color: $table-header-color
+      .dropdown
+        margin-left: 12px
+        color: $color-actian-azure
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: center
+        .ac-icon-arrow
+          color: $color-actian-azure
+          margin-left: 6px
+          transform: rotate(90deg)
+          font-size: 12px
+          width: 12px
+          height: 12px
+
+  // list item used as table row
+  .mdc-list-item
+    min-height: 64px
+    border-bottom: 1px solid $border-color
+
+// the table showing component
+.ac-showing
+  display: inline-flex
+  align-items: center
+  font-size: 14px
+  height: 30px
+  font-family: Roboto, sans-serif
+
+  // the dropdown list part
+  &__drop
+    border-radius: 3px
+    border: 1px solid $color-mid-grey
+    +flex-center
+    width: 60px
+    margin-left: 16px
+    margin-right: 16px
+    .ac-showing__number
+      line-height: 30px
+      border-right: 1px solid $color-mid-grey
+      padding-left: 8px
+      padding-right: 8px
+    .ac-icon-chevron-left
+      color: $color-actian-azure
+      transform: rotate(-90deg)
+

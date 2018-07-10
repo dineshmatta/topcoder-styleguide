@@ -1,0 +1,21 @@
+/**
+ * the icon mixins
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+
+// the icon base mixin, use svg url as mask image , and set the origin icon size
+=ac-icon-base($content)
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 24px
+  height: 24px
+  overflow: hidden
+  font-size: 20px
+  &:before
+    content: $content
+
+

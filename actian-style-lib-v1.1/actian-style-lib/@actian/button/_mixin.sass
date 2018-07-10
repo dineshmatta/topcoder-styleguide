@@ -1,0 +1,36 @@
+/**
+ * the button mixins
+ *
+ * @author      Topcoder Coder
+ * @version     1.0
+ */
+
+@import "../@material/ripple/common"
+@import "../@material/ripple/mixins"
+@import "../@material/button/mdc-button"
+@import "../@material/button/mixins"
+
+// the button outline styles
+=button-outline($color)
+  +mdc-button--outlined_()
+  +mdc-button-outline-width(1px)
+  +mdc-button-outline-color($color)
+  +mdc-button-container-fill-color(transparent)
+  .button__icon
+    color: $color
+
+// the link active styles
+=link-active
+  opacity: 0.75
+  .link__icon
+    opacity: 0.75
+
+// the button inner normal padding styles
+=button-padding
+  padding-left: 15px
+  padding-right: 15px
+
+// the button small padding styles
+=button-sm-padding
+  padding-left: 7px
+  padding-right: 8px

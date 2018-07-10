@@ -1,0 +1,25 @@
+/**
+ * the checkbox classes
+ *
+ * @author      Topcoder coder
+ * @version     1.0
+ */
+@import "../color/ac-color"
+
+// set the setbox color
+$mdc-theme-secondary: $color-actian-azure
+
+@import "../@material/ripple/common"
+@import "../@material/ripple/mixins"
+@import "../@material/checkbox/mixins"
+@import "../@material/checkbox/variables"
+
+// the check box style
+.ac-checkbox
+  +mdc-checkbox-base_
+  +mdc-ripple-surface
+  +mdc-states($color-actian-azure)
+  +mdc-ripple-radius-unbounded
+
+
+

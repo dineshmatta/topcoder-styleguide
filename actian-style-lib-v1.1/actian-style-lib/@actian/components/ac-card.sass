@@ -1,0 +1,86 @@
+/**
+ * the card classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+@import "mixin"
+
+// the card styles
+.ac-card
+  border-radius: 2px
+  font-family: Roboto, sans-serif
+  padding-left: 24px
+  padding-right: 24px
+  font-size: 14px
+
+  // the detault card style
+  &.default
+    +mdc-elevation(3)
+    +flex-center
+    max-width: 820px
+    height: 64px
+    .package
+      font-weight: bold
+      .star
+        color: $color-coral
+    .file-name
+      +flex-center
+      flex: 1
+
+  // the selected color style
+  &.selected
+    +mdc-elevation(8)
+    padding: 24px
+    max-width: 820px
+
+    .title
+      font-weight: bold
+      .star
+        color: $color-coral
+      margin-bottom: 36px
+
+    .action-buttons
+      margin-top: 24px
+      .ac-button
+        margin-right: 16px
+
+  // the history card style
+  &.history
+    +mdc-elevation(3)
+    max-width: 868px
+    padding-left: 0
+    padding-right: 0
+
+    &.collapsed
+      .header
+        .header__icon
+          color: $color-actian-azure
+          transform: rotate(-90deg)
+      .body
+        display: none
+    .header
+      cursor: pointer
+      height: 66px
+      +flex-center
+      justify-content: flex-start
+      color: $color-carbon
+      font-size: 14px
+      font-weight: bold
+      .header__icon
+        color: $color-actian-azure
+        transform: rotate(90deg)
+
+    .body
+      border-top: 3px solid $color-bay-of-many
+      padding: 24px
+      font-size: 12px
+      .line
+        margin-bottom: 4px
+      .bold
+        font-weight: bold
+
+

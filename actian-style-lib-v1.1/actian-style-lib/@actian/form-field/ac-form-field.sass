@@ -1,0 +1,47 @@
+/**
+ * the form field classes
+ *
+ * @author      Topcoder Coder
+ * @version     1.0
+ */
+
+@import "../@material/rtl/mixins"
+@import "../@material/theme/mixins"
+@import "../@material/typography/mixins"
+
+$mdc-form-field-item-spacing: 0
+
+// the form field styles, wrapper label and input element into a flex box
+.ac-form-field
+  +mdc-typography(body2)
+  +mdc-theme-prop(color, text-primary-on-background)
+
+  display: inline-flex
+  align-items: center
+  vertical-align: middle
+  > label
+    order: 0
+    margin-right: auto
+    padding-left: $mdc-form-field-item-spacing
+  +mdc-rtl
+    > label
+      margin-left: auto
+      padding-right: $mdc-form-field-item-spacing
+
+  &.more-space
+    > label
+      padding-left: 10px
+      +mdc-rtl
+      > label
+        padding-right: 10px
+
+// put label first
+.mdc-form-field--align-end
+  > label
+    order: -1
+    margin-left: auto
+    padding-right: $mdc-form-field-item-spacing
+  +mdc-rtl
+    > label
+      margin-right: auto
+      padding-left: $mdc-form-field-item-spacing

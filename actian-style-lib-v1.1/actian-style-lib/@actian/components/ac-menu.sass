@@ -1,0 +1,27 @@
+/**
+ * the menu classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+
+// the menu component
+.ac-menu
+  +mdc-elevation(12)
+  .mdc-list
+    .mdc-list-item
+      height: 43px
+      color: $color-actian-azure
+      i
+        color: $color-actian-azure
+        margin-right: 8px
+      &.active
+        background-color: $color-actian-azure
+        color: $color-white
+        i
+          color: $color-white
+
+

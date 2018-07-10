@@ -1,0 +1,43 @@
+/**
+ * the toast classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+
+// the toast background succeed color
+$toast-succeed-color: #555555
+// the toast failed background color
+$toast-failed-color: $color-coral
+
+// the toast style
+.ac-toast
+  +mdc-elevation(8)
+  padding: 0 24px 0 24px
+  font-family: Roboto, sans-serif
+  font-size: 14px
+  color: white
+  display: flex
+  flex-direction: row
+  border-radius: 2px
+  .ac-toast__text
+    .line
+      margin-top: 18px
+      margin-bottom: 18px
+    flex: 1
+
+  .ac-toast__button
+    margin-top: 7px
+
+  .ac-toast__icon
+    margin-top: 18px
+    margin-right: 4px
+
+  &.succeed
+    background-color: $toast-succeed-color
+
+  &.failed
+    background-color: $toast-failed-color

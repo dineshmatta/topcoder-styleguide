@@ -1,0 +1,68 @@
+/**
+ * the checkbox classes
+ *
+ * @author      Topcoder coder
+ * @version     1.0
+ */
+@import "../color/ac-color"
+
+$mdc-theme-secondary: $color-actian-azure
+$toggle-skeleton-color: #d5d5d5
+$toggle-normal-close-clolor: #f6f6f6
+
+@import "../@material/elevation/mixins"
+@import "../@material/rtl/mixins"
+@import "../@material/switch/functions"
+@import "../@material/switch/mixins"
+@import "../@material/switch/variables"
+
+// the switch/toggle style
+.ac-switch
+  display: inline-block
+  position: relative
+
+// disable status
+.mdc-switch__native-control:disabled ~ .mdc-switch__background
+  &::before
+    opacity: .12
+  .mdc-switch__knob
+    background-color: $color-white
+    opacity: 0.65
+  &.skeleton
+    .mdc-switch__knob
+      opacity: 1
+
+// checked status
+.mdc-switch__native-control:checked ~ .mdc-switch__background
+
+  &::before
+    background-color: $color-actian-azure
+  .mdc-switch__knob
+    background-color: $color-actian-azure
+
+  &.skeleton
+    &::before
+      opacity: .12
+      background-color: $color-mid-grey
+    .mdc-switch__knob
+      background-color: $toggle-skeleton-color
+
+// toggle normal status
+.mdc-switch__native-control:enabled:not(:checked) ~ .mdc-switch__background
+  .mdc-switch__knob
+    background-color: $color-light-grey
+
+  // toggle normal skeleton status
+  &.skeleton
+    &::before
+      opacity: .12
+    .mdc-switch__knob
+      background-color: $toggle-skeleton-color
+
+// disable and not checked
+.mdc-switch__native-control:disabled:not(:checked) ~ .mdc-switch__background
+  &::before
+    opacity: .12
+  .mdc-switch__knob
+    background-color: $toggle-normal-close-clolor
+    opacity: 1

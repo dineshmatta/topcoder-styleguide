@@ -1,0 +1,70 @@
+/**
+ * the tip classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+
+// the tip backgroud color
+$tip-bg-color: #414141
+
+// the tip component
+.ac-tip
+  +mdc-elevation(6)
+  font-family: Roboto, sans-serif
+  width: 180px
+  background-color: $tip-bg-color
+  position: relative
+  border-radius: 8px
+  color: $color-light-grey
+  padding: 12px
+  font-size: 12px
+
+  // commmon arrow
+  .ac-tip__arrow
+    width: 0
+    height: 0
+    position: absolute
+
+  // left direction
+  &.left
+    margin-left: 16px
+    .ac-tip__arrow
+      left: -16px
+      top: 18px
+      border-top: 12px solid transparent
+      border-right: 16px solid $tip-bg-color
+      border-bottom: 12px solid transparent
+
+  // up direction
+  &.up
+    margin-top: 14px
+    .ac-tip__arrow
+      left: 90px
+      top: -16px
+      border-left: 12px solid transparent
+      border-right: 12px solid transparent
+      border-bottom: 16px solid $tip-bg-color
+
+  // bottom direction
+  &.bottom
+    margin-bottom: 16px
+    .ac-tip__arrow
+      left: 90px
+      bottom: -16px
+      border-left: 12px solid transparent
+      border-right: 12px solid transparent
+      border-top: 16px solid $tip-bg-color
+
+  // right direction
+  &.right
+    margin-right: 16px
+    .ac-tip__arrow
+      top: 18px
+      right: -16px
+      border-top: 12px solid transparent
+      border-left: 16px solid $tip-bg-color
+      border-bottom: 12px solid transparent

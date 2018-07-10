@@ -1,0 +1,161 @@
+/**
+ * the button classes
+ *
+ * @author      Topcoder Coder
+ * @version     1.0
+ */
+
+@import "../@material/ripple/common"
+@import "../@material/ripple/mixins"
+@import "../@material/button/mdc-button"
+@import "../@material/button/mixins"
+@import "../@material/fab/mixins"
+@import "mixin"
+@import "../color/ac-color"
+
+// the link styles
+.ac-link
+  align-items: center
+  justify-content: center
+  display: inline-flex
+  color: $color-actian-azure
+  font-family: Roboto, sans-serif
+  text-decoration: none
+  font-size: 14px
+  .link__icon
+    color: $color-actian-azure
+    font-size: 16px
+    margin-right: 2px
+  &:active
+    +link-active
+  &.active
+    +link-active
+  &.sm
+    font-size: 12px
+    .link__icon
+      width: 16px
+      height: 16px
+
+// the float circle button styles
+.ac-float-button
+  +mdc-fab-base_
+  +mdc-fab-container-color($color-white)
+  +mdc-fab-icon-size(24px)
+  +mdc-fab-ink-color($color-actian-azure)
+  +mdc-states($color-actian-azure)
+  .button__icon
+    color: $color-actian-azure
+
+// the common button styles
+.ac-button
+  +mdc-button-base_()
+  +mdc-button-corner-radius(2px)
+  +mdc-button-container-fill-color($color-bay-of-many)
+  +mdc-button-ink-color($color-white)
+  +mdc-states($color-white)
+  +button-padding()
+
+  letter-spacing: 0
+  text-transform: none
+  height: 38px
+  font-size: 14px
+
+  .button__icon
+    +mdc-button__icon_
+    height: 24px
+    width: 24px
+
+  // make backgroud transparent
+  &.transparent
+    +mdc-button-container-fill-color(transparent)
+
+  // cancel style button
+  &.cancel
+    +mdc-button-container-fill-color(transparent)
+    +mdc-button-ink-color($color-actian-azure)
+    +mdc-states($color-actian-azure)
+
+  // primary button
+  &.primary
+    min-width: 100px
+
+  // primary with small height button
+  &.sm
+    height: 30px
+
+  // primary with large button
+  &.lg
+    width: 100%
+    flex: 1
+    height: 48px
+    font-size: 16px
+
+  // secondary button
+  &.secondary
+    height: 30px
+
+    +mdc-button--outlined_()
+    +mdc-button-outline-width(1px)
+    +mdc-button-outline-color($color-mid-grey)
+    +mdc-button-container-fill-color(transparent)
+    +mdc-button-ink-color($color-actian-azure)
+    +mdc-states($color-actian-azure)
+    .button__icon
+      color: $color-actian-azure
+    line-height: 28px
+
+    &:disabled
+      line-height: 28px
+      .button__icon
+        color: $color-mid-grey
+  // button with danger style, red border and content
+  &.danger
+    font-weight: bold
+    +mdc-states($color-coral)
+    .button__icon
+      color: $color-coral
+    +mdc-button-ink-color($color-coral)
+
+  // button with danger style, red backgroud with white color
+  &.danger-fill
+    +mdc-button-container-fill-color($color-coral)
+
+  // normal fill button, fill backgourd and white text
+  &.normal-fill
+    +mdc-button-container-fill-color($color-actian-azure)
+    &.sm
+      +button-sm-padding()
+
+  // normal, color with border and text
+  &.normal
+    +button-outline($color-mid-grey)
+    +mdc-button-container-fill-color(transparent)
+    +mdc-button-ink-color($color-actian-azure)
+    +mdc-states($color-actian-azure)
+    .button__icon
+      display: inline-flex
+      color: $color-actian-azure
+
+  // selected style button
+  &.selected
+    +button-outline($color-carbon)
+    +mdc-button-ink-color($color-carbon)
+    +mdc-states($color-carbon)
+    font-weight: bold
+    font-size: 12px
+    +button-sm-padding()
+    .button__icon
+      margin-right: 6px
+      width: 18px
+      height: 18px
+    &:disabled
+      +button-sm-padding
+
+  // common disable style
+  &:disabled
+    +button-outline($color-mid-grey)
+    +button-padding()
+
+  .button__icon
+    display: inline-flex
+    font-size: 22px

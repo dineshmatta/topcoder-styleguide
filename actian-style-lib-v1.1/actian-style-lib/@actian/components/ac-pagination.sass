@@ -1,0 +1,57 @@
+/**
+ * the pagination classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+@import "../@material/ripple/mdc-ripple"
+@import "mixin"
+
+// the pagination component
+.ac-pagination
+  display: inline-flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  font-family: Roboto, sans-serif
+
+  // update the arrow icon
+  .ac-icon-chevron-left
+    color: $color-actian-azure
+    width: 18px
+    height: 18px
+
+  // make the arrow center
+  .ac-pagination__arrow
+    +flex-center
+
+  // rotate the pagination right arrow
+  .ac-pagination__right-icon
+    transform: rotate(-180deg)
+
+  .ac-pagination__item
+    width: 34px
+    height: 34px
+    font-size: 14px
+    +flex-center
+    color: $color-carbon
+    text-decoration: none
+    cursor: pointer
+
+    // active status
+    &.active
+      background-color: $color-bay-of-many
+      color: $color-white
+
+  // the disabled status
+  &.disabled
+    .ac-pagination__item
+      color: $color-mid-grey
+      &.active
+        background-color: $color-mid-grey
+        color: $color-white
+    .ac-icon-chevron-left
+      color: $color-mid-grey

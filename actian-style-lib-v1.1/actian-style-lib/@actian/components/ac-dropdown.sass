@@ -1,0 +1,48 @@
+/**
+ * the dropdown component classes
+ *
+ * @author      Topcoder coder
+ * @version     1.0
+ */
+
+@import "../@material/elevation/mixins"
+@import "../color/ac-color"
+@import "mixin"
+
+// the dropdown search color
+$dropdown-search-color: #D1D1D1
+
+// the dropdown style
+.ac-dropwown
+  +mdc-elevation(8)
+  display: flex
+  flex-direction: column
+
+  // search input part
+  .search-line
+    display: flex
+    flex-direction: row
+    height: 42px
+    border-bottom: 1px solid $dropdown-search-color
+    align-items: center
+    justify-content: center
+
+    .search-input
+      +search-input($dropdown-search-color)
+
+    .search-icon
+      margin-right: 12px
+      color: $color-actian-azure
+
+  // the content part
+  .mdc-list
+    max-height: 250px
+    overflow: auto
+    +scrollbars(0.6em, $color-mid-grey, $color-white)
+    .mdc-list-item
+      height: 32px
+      font-size: 14px
+      color: $color-actian-azure
+      &.active
+        background-color: $color-actian-azure
+        color: $color-white

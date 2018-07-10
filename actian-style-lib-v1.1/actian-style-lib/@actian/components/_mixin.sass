@@ -1,0 +1,102 @@
+/**
+ * the components mixins
+ *
+ * @author      Topcoder coder
+ * @version     1.0
+ */
+
+// the input placeholder styles
+// @param the placeholder content
+=placeholder
+  $selector: ""
+  $prefixes: (moz: "::-moz", webkit: "::-webkit", ie: ":-ms")
+
+  @each $prop, $value in $prefixes
+    @if $prop != "moz"
+      $selector: #{$value}-input-placeholder
+    @else
+      $selector: #{$value}-placeholder
+
+    @if &
+      &#{$selector}
+        @content
+    @else
+      #{$selector}
+        @content
+  &::placeholder
+    @content
+
+// custom search input styles
+// @param $color the input font color
+=search-input($color)
+  height: 28px
+  flex: 1
+  margin-left: 15px
+  outline: none
+  border: none
+  background-color: transparent
+  font-size: 14px
+  font-family: Roboto, sans-serif
+  +placeholder
+    color: $color
+
+// make block flex and make inner content in center
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+// update table cell color
+=table-cell-color($color)
+  color: $color
+  i
+    color: $color
+
+// inject flex level into layers
+=flex-levels
+  &.flex0-5
+    flex: 0.5
+  &.flex1
+    flex: 1
+  &.flex1-5
+    flex: 1.5
+  &.flex2
+    flex: 2
+  &.flex3
+    flex: 3
+  &.flex4
+    flex: 4
+  &.flex5
+    flex: 5
+  &.flex6
+    flex: 6
+  &.flex7
+    flex: 7
+  &.flex8
+    flex: 8
+  &.flex9
+    flex: 9
+
+// Mixin to customize scrollbars, firefox no support
+// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+// @param {Color} $foreground-color - Scrollbar's color
+// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+=scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%))
+  &::-webkit-scrollbar
+    width: $size
+    height: $size
+
+  &::-webkit-scrollbar-thumb
+    background: $foreground-color
+    border-radius: 4px
+
+  &::-webkit-scrollbar-track
+    background: $background-color
+
+  body
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color
+
+// the logo base mixin
+=ac-logo-base
+  display: inline-flex

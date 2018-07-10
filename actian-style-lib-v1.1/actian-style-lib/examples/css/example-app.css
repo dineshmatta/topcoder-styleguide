@@ -1,0 +1,94 @@
+
+body {
+  background-color: #fafafa;
+  font-family: Roboto sans-serif;
+  padding-bottom: 120px;
+  padding-top: 48px;
+}
+
+.gloabl-title {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.column {
+  flex: 1;
+  margin-right: 25px;
+  padding-left: 5px;
+}
+
+.column > button {
+  margin-top: 12px;
+}
+
+.column > .more-space {
+  margin-top: 24px;
+}
+
+.column > .ac-text-field {
+  margin-top: 12px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+}
+
+.row > button {
+  margin: 5px;
+}
+
+.row > .ac-tip {
+  margin-right: 24px;
+}
+
+.row > i {
+  margin-right: 12px;
+}
+
+.color-block {
+  margin: 5px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-block .block {
+  height: 100px;
+  width: 100px;
+}
+
+.color-block .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sample-container-dropdown {
+  width: 280px;
+}
+
+.sample-container-menu-primary {
+  width: 150px;
+}
+
+.tag-container .ac-tag {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.sample-search-container {
+  display: flex;
+  width: 450px;
+}
+
+.sample-search-container > .ac-search-bar {
+  margin-right: 12px;
+}
