@@ -1,0 +1,12 @@
+.container-fluid {
+    .col-menu, .col-content {
+        height: 100vh;
+    }
+    .col-menu {
+        padding: 45px 15px 0 45px;
+    }
+    .col-content {
+        background-color: #fbfbfb;
+        padding: 55px 15px 0 60px;
+    }
+}

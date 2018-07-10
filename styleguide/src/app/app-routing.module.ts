@@ -1,9 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { LogoComponent } from './components/logo/logo.component';
 import { ColorsComponent } from './components/colors/colors.component';
 import { TypographyComponent } from './components/typography/typography.component';
@@ -20,31 +18,28 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ModalsComponent } from './components/modals/modals.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
+const routes: Routes = [
+  { path: '', redirectTo: '/logo', pathMatch: 'full' },
+  { path: 'logo', component: LogoComponent },
+  { path: 'colors', component: ColorsComponent },
+  { path: 'typography', component: TypographyComponent },
+  { path: 'icons', component: IconsComponent },
+  { path: 'buttons-links', component: ButtonsAndLinksComponent },
+  { path: 'inputs-dropdowns', component: InputsAndDropdownComponent },
+  { path: 'checkbox-radio', component: CheckboxAndRadioComponent },
+  { path: 'menus', component: MenuComponent },
+  { path: 'header-footer', component: HeaderFooterComponent },
+  { path: 'others', component: OthersComponent },
+  { path: 'data-tables', component: DataTablesComponent },
+  { path: 'wizards', component: WizardsComponent },
+  { path: 'cards', component: CardsComponent },
+  { path: 'modals', component: ModalsComponent },
+  { path: 'progress-bar', component: ProgressBarComponent }
+];
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavigationComponent,
-    LogoComponent,
-    ColorsComponent,
-    TypographyComponent,
-    IconsComponent,
-    ButtonsAndLinksComponent,
-    InputsAndDropdownComponent,
-    CheckboxAndRadioComponent,
-    MenuComponent,
-    HeaderFooterComponent,
-    OthersComponent,
-    DataTablesComponent,
-    WizardsComponent,
-    CardsComponent,
-    ModalsComponent,
-    ProgressBarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  declarations: []
 })
-export class AppModule { }
+export class AppRoutingModule {}
