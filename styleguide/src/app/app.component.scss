@@ -1,6 +1,6 @@
 .container-fluid {
     .col-menu, .col-content {
-        height: 100vh;
+        min-height: 100vh;
     }
     .col-menu {
         padding: 45px 15px 0 45px;
