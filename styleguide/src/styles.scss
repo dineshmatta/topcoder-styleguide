@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 .components-wrapper {
     .title-wrapper {
@@ -13,6 +13,9 @@ body {
         }
         .subtitle{
             font-size: 1.2rem;
+            a {
+                text-decoration: none;
+            }
         }
     }
 }
