@@ -1,0 +1,177 @@
+/**
+ * the header classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+
+// the header high light color
+$header-highlight-color: #41CEC3
+
+// the main header component
+.ac-header
+  padding: 25px 110px 0 110px
+
+  display: flex
+  flex-direction: row
+  font-family: Roboto, sans-serif
+
+  // the header left part
+  .left-part
+    .logo-part
+      display: flex
+      flex-direction: row
+      margin-bottom: 30px
+      .ac-logo--secondary
+        margin-right: 20px
+      .title-part
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: flex-end
+        .primary-title
+          font-size: 22px
+          color: $color-carbon
+        .secondary-title
+          margin-top: 5px
+          font-size: 14px
+    // the navgate part
+    .nav-part
+      display: flex
+      flex-direction: row
+      flex: 1
+      align-items: flex-end
+      .nav-item
+        display: flex
+        flex-direction: column
+        .nav-item__text
+          font-size: 14px
+          padding-left: 30px
+          padding-right: 30px
+          font-weight: bold
+          color: $color-mid-grey
+        .nav-item__indicator
+          margin-top: 10px
+          height: 5px
+        &.active
+          .nav-item__text
+            color: $color-carbon
+          .nav-item__indicator
+            background-color: $header-highlight-color
+
+  // the user right part
+  .right-part
+    display: flex
+    flex-direction: column
+    flex: 1
+    .profile-part
+      flex: 1
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: flex-end
+      .profile-name
+        color: $color-mid-grey
+        display: flex
+        font-size: 14px
+        align-items: center
+        justify-content: center
+        .ac-icon-chevron-left
+          margin-left: 8px
+          width: 18px
+          height: 18px
+          transform: rotate(-90deg)
+          color: $color-mid-grey
+
+      .profile-header
+        height: 32px
+        width: 32px
+        background-color: $color-light-grey
+        font-size: 14px
+        color: $color-mid-grey
+        border-radius: 16px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: 10px
+        margin-right: 10px
+
+      .mdc-icon-button
+        .ac-icon-help
+          color: $color-actian-azure
+        .ac-icon-notification
+          color: $color-actian-azure
+
+    .setting-part
+      display: flex
+      flex-direction: row
+      align-items: center
+      height: 60px
+      justify-content: flex-end
+      font-size: 14px
+      font-weight: bold
+      color: $color-carbon
+      .ac-icon-setting
+        color: $color-carbon
+
+// the sub header component
+.ac-sub-header
+  background-color: $color-bay-of-many
+  font-family: Roboto, sans-serif
+  display: flex
+  flex-direction: column
+  padding: 15px 25px 0 25px
+  .primary-title-part
+    color: $color-light-grey
+    display: flex
+    flex-direction: row
+
+    .text
+      font-size: 22px
+      flex: 1
+    .right-part
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      .text
+        white-space: nowrap
+        margin-right: 18px
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+          margin-right: 95px
+        font-size: 14px
+  .secondary-title-part
+    color: $color-white
+    font-size: 14px
+    margin-top: 5px
+
+  .bottom-part
+    display: flex
+    flex-direction: row
+    margin-top: 20px
+    .nav-part
+      display: flex
+      flex-direction: row
+      flex: 1
+      align-items: flex-end
+      .nav-item
+        display: flex
+        flex-direction: column
+        .nav-item__text
+          font-size: 14px
+          padding-left: 38px
+          padding-right: 38px
+          font-weight: 500
+          color: $color-light-grey
+        .nav-item__indicator
+          margin-top: 10px
+          height: 5px
+        &.active
+          .nav-item__text
+            color: $color-white
+          .nav-item__indicator
+            background-color: $header-highlight-color
+
+

@@ -1,0 +1,23 @@
+/**
+ * the logo classes
+ *
+ * @author      Topcoder Coder
+ * @version     1.0
+ */
+
+@import "mixin"
+.ac-logo
+
+  // the primary logo
+  &--primary
+    +ac-logo-base
+    width: 202px
+    height: 65px
+    background-image: url("../static/img/primary-logo.svg")
+
+  // the secondary logo
+  &--secondary
+    +ac-logo-base
+    width: 66px
+    height: 65px
+    background-image: url("../static/img/second-logo.svg")

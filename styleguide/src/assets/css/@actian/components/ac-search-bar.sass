@@ -1,0 +1,53 @@
+/**
+ * the search bar classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+@import "mixin"
+
+// the search border color
+$search-border-color: #dddddd
+
+// the placeholder color
+$placeholder-color: #989898
+
+// the search bar style
+.ac-search-bar
+  position: relative
+  height: 32px
+  display: inline-flex
+  border: 1px solid #dddddd
+  border-radius: 3px
+  align-items: center
+  justify-content: center
+  background-color: $color-white
+
+  .ac-search-bar__input
+    +search-input($placeholder-color)
+
+  .ac-search-bar__icon
+    margin-left: 6px
+    color: $color-actian-azure
+
+  // disabled mode
+  &.disabled
+    .ac-search-bar__icon
+      color: $placeholder-color
+
+  // expanded mode
+  &.expanded
+    width: 100%
+    flex: 1
+  // collapsed mode
+  &.collapsed
+    width: 40px
+    .ac-search-bar__icon
+      margin: auto
+    .ac-search-bar__input
+      display: none
+
+

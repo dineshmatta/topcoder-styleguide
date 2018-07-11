@@ -1,0 +1,45 @@
+/**
+ * the dialog styles
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+
+@import "../color/ac-color"
+@import "../@material/elevation/mixins"
+
+// the dialog component
+.ac-dialog
+  +mdc-elevation(24)
+  display: flex
+  font-family: Roboto, sans-serif
+  flex-direction: column
+  background-color: $color-light-grey
+  border-radius: 2px
+
+  // the dialog header part
+  .header
+    padding: 24px 24px 0
+    display: flex
+    .title
+      flex: 1
+      font-size: 24px
+
+  // the body part
+  .body
+    margin-top: 20px
+    padding: 0 24px 24px
+    font-size: 14px
+
+  // the footer part
+  .footer
+    padding: 24px 16px 24px 24px
+    display: flex
+    justify-content: flex-end
+
+    .ac-button
+      margin-right: 16px
+
+  // small dialog
+  &.sm
+    width: 395px

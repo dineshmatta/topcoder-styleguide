@@ -1,0 +1,38 @@
+/**
+ * the footer classes
+ *
+ * @author      TC Coder
+ * @version     1.0
+ */
+@import "../color/ac-color"
+
+// the main footer component
+.ac-footer
+  font-family: Roboto, sans-serif
+  border-top: 1px solid $color-mid-grey
+  .copy-right
+    margin-top: 28px
+    color: $color-mid-grey
+    font-size: 14px
+    display: flex
+    align-items: center
+    justify-content: center
+  .links
+    margin-top: 18px
+    margin-bottom: 30px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+    .link-item
+      font-size: 14px
+      margin-left: 8px
+      padding-right: 7px
+      border-right: 1px solid $color-mid-grey
+      color: $color-actian-azure
+      text-decoration: none
+      &:active
+        color: $color-bay-of-many
+      &.last
+        border-right: none

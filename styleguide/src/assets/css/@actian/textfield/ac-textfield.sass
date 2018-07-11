@@ -1,0 +1,50 @@
+/**
+ * the input text field classes
+ *
+ * @author      Topcoder Coder
+ * @version     1.0
+ */
+
+@import ../@material/textfield/mixins
+@import "../color/ac-color"
+
+// the text field style
+.ac-text-field
+  +mdc-text-field-bottom-line-color($mdc-text-field-bottom-line-idle)
+  +mdc-text-field-hover-bottom-line-color($mdc-text-field-bottom-line-hover)
+  +mdc-text-field-line-ripple-color_(primary)
+  +mdc-text-field-ink-color($mdc-text-field-ink-color)
+  +mdc-text-field-label-color($mdc-text-field-label)
+  +mdc-text-field-helper-text-color($mdc-text-field-helper-text-color)
+  +mdc-text-field-fullwidth-bottom-line-color($mdc-text-field-fullwidth-bottom-line-color)
+  +mdc-text-field-icon-color($mdc-text-field-icon-color)
+
+  display: inline-block
+  position: relative
+  margin-bottom: 8px
+  will-change: opacity, transform, color
+  &.dropdown
+    +mdc-text-field-ink-color($color-actian-azure)
+    .dropdown-icon
+      position: absolute
+      transform: rotate(90deg)
+      width: 20px
+      height: 20px
+      right: 3px
+      bottom: 4px
+      color: $color-actian-azure
+
+// error mode
+.invalid
+  +mdc-text-field-bottom-line-color($color-coral)
+  +mdc-text-field-hover-bottom-line-color($color-coral)
+  +mdc-text-field-line-ripple-color($color-coral)
+  +mdc-text-field-label-color($color-coral)
+  +mdc-text-field-helper-text-validation-color($color-coral)
+
+  &.mdc-text-field--with-trailing-icon
+    +mdc-text-field-icon-color($color-coral)
+  + .mdc-text-field-helper-text--validation-msg
+    opacity: 1
+    color: $color-coral !important
+

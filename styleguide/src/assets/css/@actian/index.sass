@@ -1,0 +1,51 @@
+/**
+ * the @actian styles lib entry
+ *
+ * @author      Topcoder Coder
+ * @version     1.0
+ */
+
+
+// the basic styles
+@import "color/ac-color"
+@import "typography/ac-typography"
+@import "button/ac-button"
+@import "icon/ac-icon"
+@import "form-field/ac-form-field"
+
+@import "checkbox/ac-checkbox"
+@import "@material/checkbox/mdc-checkbox"
+
+@import "@material/list/mdc-list"
+@import "@material/radio/mdc-radio"
+
+@import "@material/icon-button/mdc-icon-button"
+@import "radio/ac-radio"
+
+@import "@material/switch/mdc-switch"
+@import "switch/ac-switch"
+
+@import "@material/textfield/mdc-text-field"
+@import "textfield/ac-textfield"
+
+// the actian common components
+@import "components/ac-logo"
+@import "components/ac-dropdown"
+@import "components/ac-header"
+@import "components/ac-footer"
+@import "components/ac-menu"
+@import "components/ac-tag"
+@import "components/ac-breadcrumb"
+@import "components/ac-tip"
+@import "components/ac-search-bar"
+@import "components/ac-toast"
+@import "components/ac-card"
+@import "components/ac-dialog"
+@import "components/ac-pagination"
+@import "components/ac-table"
+
+// build compressed css
+// sass -I . index.sass:./dist/actian.css --style compressed -q
+
+// watch
+// sass -I . --watch index.sass:../examples/css/actian.css -q

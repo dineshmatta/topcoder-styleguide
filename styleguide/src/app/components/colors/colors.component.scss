@@ -1,0 +1,17 @@
+.components-wrapper {
+  .component {
+    .subtitle {
+      margin-bottom: 40px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .element {
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    margin-bottom: 90px;
+  }
+}
