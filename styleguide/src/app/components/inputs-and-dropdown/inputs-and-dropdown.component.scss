@@ -1,0 +1,20 @@
+.component {
+    margin-bottom: 80px;
+    .element-wrapper {
+        .row {
+            margin-bottom: 40px;
+            .ac-text-field {
+               .mdc-text-field__input {
+                   font-size: 1.6rem;
+                   height: 50px;
+               }
+               .mdc-floating-label {
+                   font-size: 1.4rem;
+               }
+            }
+            .mdc-text-field-helper-text {
+              font-size: 1.3rem;
+            }
+        }
+    }
+}

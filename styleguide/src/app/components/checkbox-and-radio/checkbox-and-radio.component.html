@@ -1,3 +1,153 @@
-<p>
-  checkbox-and-radio works!
-</p>
+<div class="components-wrapper">
+  <div class="title-wrapper">
+    <h3 class="title">Checkboxes, Radio Buttons &amp; Toggle Buttons</h3>
+  </div>
+  <div class="component col-md-12 col-lg-12 row">
+    <div class="col-lg-8 col-md-8 element-wrapper">
+      <div class="element-title row">Checkboxes</div>
+      <div class="row">
+        <div class="ac-form-field">
+          <div class="ac-checkbox">
+            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-01" />
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+          <label for="checkbox-01">Inactive</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ac-form-field">
+          <div class="ac-checkbox">
+            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-02" checked/>
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+              </svg>
+              <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+          </div>
+          <label for="checkbox-02">Active</label>
+        </div>
+      </div>
+      <div class="row">
+        <pre>Code preview</pre>
+      </div>
+    </div>
+  </div>
+  <div class="component col-md-12 col-lg-12 row">
+    <div class="col-lg-8 col-md-8 element-wrapper">
+      <div class="element-title row">Radio Buttons</div>
+      <div class="row">
+        <div class="ac-form-field">
+          <div class="ac-radio">
+            <input class="mdc-radio__native-control" type="radio" id="radio-02" name="radios">
+            <div class="mdc-radio__background">
+              <div class="mdc-radio__outer-circle"></div>
+              <div class="mdc-radio__inner-circle"></div>
+            </div>
+          </div>
+          <label for="radio-02">Inactive</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ac-form-field">
+          <div class="ac-radio">
+            <input class="mdc-radio__native-control" type="radio" id="radio-03" name="radios" checked>
+            <div class="mdc-radio__background">
+              <div class="mdc-radio__outer-circle"></div>
+              <div class="mdc-radio__inner-circle"></div>
+            </div>
+          </div>
+          <label for="radio-03">Selected</label>
+        </div>
+      </div>
+      <div class="row">
+        <pre>Code preview</pre>
+      </div>
+    </div>
+  </div>
+  <div class="component col-md-12 col-lg-12 row">
+    <div class="col-lg-8 col-md-8 element-wrapper toggle-buttons">
+      <div class="element-title row">Toggle Buttons</div>
+      <div class="row">
+        <div class="pull-left element col-lg-6 col-md-6">
+          <div class="ac-form-field more-space">
+            <div class="mdc-switch">
+              <input type="checkbox" id="basic-switch-01" class="mdc-switch__native-control" role="switch" checked>
+              <div class="mdc-switch__background">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+            <label for="basic-switch-01">Active</label>
+          </div>
+        </div>
+        <div class="pull-left element col-lg-6 col-md-6">
+          <div class="ac-form-field more-space">
+            <div class="ac-switch">
+              <input type="checkbox" id="basic-switch-04" class="mdc-switch__native-control" role="switch">
+              <div class="mdc-switch__background">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+            <label for="basic-switch-04">Inactive</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pull-left element col-lg-6 col-md-6">
+          <div class="ac-form-field more-space">
+            <div class="mdc-switch">
+              <input type="checkbox" id="basic-switch-02" class="mdc-switch__native-control" role="switch" checked disabled>
+              <div class="mdc-switch__background">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+            <label for="basic-switch-02">Active Disabled</label>
+          </div>
+        </div>
+        <div class="pull-left element col-lg-6 col-md-6">
+          <div class="ac-form-field more-space">
+            <div class="ac-switch">
+              <input type="checkbox" id="basic-switch-05" class="mdc-switch__native-control" role="switch" disabled>
+              <div class="mdc-switch__background">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+            <label for="basic-switch-05">Inactive Disabled</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pull-left element col-lg-6 col-md-6">
+          <div class="ac-form-field more-space">
+            <div class="mdc-switch">
+              <input type="checkbox" id="basic-switch-03" class="mdc-switch__native-control" role="switch" checked>
+              <div class="mdc-switch__background skeleton">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+            <label for="basic-switch-03">Active Skeleton</label>
+          </div>
+        </div>
+        <div class="pull-left element col-lg-6 col-md-6">
+          <div class="ac-form-field more-space">
+            <div class="ac-switch">
+              <input type="checkbox" id="basic-switch-06" class="mdc-switch__native-control" role="switch">
+              <div class="mdc-switch__background skeleton">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+            <label for="basic-switch-06">Inactive Skeleton</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <pre>Code preview</pre>
+      </div>
+    </div>
+  </div>
+</div>
