@@ -1,0 +1,16 @@
+.title-wrapper {
+    margin-bottom: 50px;
+}
+.component {
+    margin-bottom: 80px;
+    .element-wrapper {
+        .element-title {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        }
+        .element {
+        margin: 0 20px 20px 0;
+        }
+    }
+}
