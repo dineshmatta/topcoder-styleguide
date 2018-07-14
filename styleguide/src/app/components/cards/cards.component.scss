@@ -1,0 +1,27 @@
+.component {
+  margin-bottom: 50px;
+  .element-wrapper {
+    .element-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .element-sub-title {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .row {
+      margin-bottom: 20px;
+      .ac-text-field {
+        .mdc-floating-label {
+          font-size: 1.4rem;
+          text-transform: capitalize;
+        }
+        .mdc-text-field__input {
+          font-size: 1.4rem;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
