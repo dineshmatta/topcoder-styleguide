@@ -1,0 +1,30 @@
+.component {
+  margin-bottom: 50px;
+  .element-wrapper {
+    .element-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .element-sub-title {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      ol {
+        padding: 0;
+      }
+    }
+    .row {
+      margin-bottom: 20px;
+      .tooltip-container {
+        margin-right: 40px;
+      }
+      .sample-search-container {
+        display: flex;
+        width: 450px;
+        .ac-search-bar {
+            margin-right: 12px;
+        }
+      }
+    }
+  }
+}
