@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { EscapeHtmlService } from './shared/escape-html.service';
+
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -44,7 +46,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EscapeHtmlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
