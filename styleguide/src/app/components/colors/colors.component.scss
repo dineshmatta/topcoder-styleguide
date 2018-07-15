@@ -1,9 +1,7 @@
-@import '../../../assets/@actian/color/ac-color.sass';
-
+// Customizing classes for color component
 .components-wrapper {
   .component {
     .subtitle {
-      margin-bottom: 40px;
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: bold;
@@ -36,6 +34,6 @@
         }
       }
     }
-    margin-bottom: 90px;
+    margin-bottom: 50px;
   }
 }

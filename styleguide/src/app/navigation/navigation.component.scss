@@ -8,7 +8,7 @@
     .title {
         font-weight: bold;
         font-size: 1.3rem;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
     .links {
         .list-unstyled {
@@ -20,7 +20,8 @@
                     text-decoration: none;
                     color: #000000;
                     &.active {
-                        font-weight: 700;
+                        font-weight: 900;
+                        font-size: 110%;
                     }
                 }
             }

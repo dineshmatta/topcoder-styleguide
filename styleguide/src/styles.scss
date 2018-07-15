@@ -1,14 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import 'assets/@actian/dist/actian.css';
+/**
+* Global CSS classes, applicable to all components
+**/
 
+// Setting the default Roboto font site wide
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
+
+// Every Component class has component-wrapper class, so setting detfault styles
+// to all component's title and subtitle
 .components-wrapper {
     .title-wrapper {
-        margin-bottom: 80px;
+        margin-bottom: 45px;
         .title {
             font-weight: bold;
         }
