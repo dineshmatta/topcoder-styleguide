@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { EscapeHtmlService } from '../../shared/escape-html.service';
 
 @Component({
-  selector: "app-buttons-and-links",
-  templateUrl: "./buttons-and-links.component.html",
-  styleUrls: ["./buttons-and-links.component.scss"]
+  selector: 'app-buttons-and-links',
+  templateUrl: './buttons-and-links.component.html',
+  styleUrls: ['./buttons-and-links.component.scss']
 })
 export class ButtonsAndLinksComponent implements OnInit {
   constructor(private escapeHtml: EscapeHtmlService) {}
@@ -16,7 +16,7 @@ export class ButtonsAndLinksComponent implements OnInit {
     '<button class="ac-button primary" disabled>Next</button>\n' +
     '<button class="ac-button">Save</button>\n' +
     '<button class="ac-button" disabled>Save</button>\n' +
-    '<button class="ac-button primary lg">Login in</button>\n';
+    '<button class="ac-button primary lg">Login in</button>';
 
   codePreview2 =
     '<button class="ac-button secondary">< i class = "button__icon ac-icon-add" > </i>Add</button>\n' +
